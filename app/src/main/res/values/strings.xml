@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Notes</string>
+
+    <string name="addbutton">addbutton</string>
+    <string name="notes">Notes</string>
+
+
+    <string name="add_note">Add Note</string>
+    <string name="savebutton">savebutton</string>
+    <string name="enter_the_title">Enter the title</string>
+    <string name="enter_the_description">Enter the description</string>
+
+    <string name="title">Title</string>
+    <string name="content">Content</string>
+    <string name="updatebutton">updatebutton</string>
+    <string name="edit_note">Edit Note</string>
+    <string name="deletebutton">deletebutton</string>
+
+</resources>
