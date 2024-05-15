@@ -29,12 +29,17 @@ class UpdateNoteActivity : AppCompatActivity() {
         binding.updateContentEditText.setText(note.content)
 
         binding.updateSaveButton.setOnClickListener{
-            val newTitle = binding.updateTitleEditText.text.toString()
-            val newContent = binding.updateContentEditText.text.toString()
-            val updateNote = Note(noteId, newTitle, newContent)
-            db.updateNote(updateNote)
-            finish()
-            Toast.makeText(this, "Changed Saved", Toast.LENGTH_SHORT).show()
+            val newTitle = binding.updateTitleEditText.text.toString().trim()
+            val newContent = binding.updateContentEditText.text.toString().trim()
+
+            if (newTitle.isEmpty() || newContent.isEmpty()) {
+                Toast.makeText(this, "Title and content cannot be empty", Toast.LENGTH_SHORT).show()
+            } else {
+                val updateNote = Note(noteId, newTitle, newContent)
+                db.updateNote(updateNote)
+                finish()
+                Toast.makeText(this, "Changes Saved", Toast.LENGTH_SHORT).show()
+            }
         }
     }
 }
